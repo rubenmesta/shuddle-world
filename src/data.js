@@ -12,7 +12,7 @@ export const social = [
 
 export const sections = [
   {
-    image: '/img/saturn.png',
+    image: '/img/unsplash.jpg',
     title: 'Perseverance Rover Discovers Ancient Riverbed on Saturn',
     body: "The discovery of the ancient riverbed comes from Perseverance's analysis of rock layers in the delta. The sedimentary rocks are thought to have formed over billions of years as silt and clay settled in the calm waters of the river delta. This environment could have provided favorable conditions for the development and preservation of microbial life, if it ever existed on Mars.",
   },
@@ -24,21 +24,21 @@ export const cards = [
     title: 'Welcome to Space News',
     body: 'Explore the cosmos through our lens. Stay updated with the latest space discoveries, astronomical events, and interstellar adventures.',
     buttonText: 'Read Nowt',
-    variant: 'black',
+    variant: 'primary',
   },
   {
     image: '/img/card2.webp',
     title: "NASA's New Mission to Jupiter's Moons",
     body: "NASA announces an upcoming mission to explore Europa and Ganymede, two of Jupiter's fascinating moons.",
     buttonText: 'Read More',
-    variant: 'black',
+    variant: 'primary',
   },
   {
     image: '/img/card3.webp',
-    title: 'Exploring the Mysteries of Black Holes',
-    body: 'Dive into the enigmatic world of black holes, where the laws of physics break down, and time and space warp.',
+    title: 'Exploring the Mysteries of primary Holes',
+    body: 'Dive into the enigmatic world of primary holes, where the laws of physics break down, and time and space warp.',
     buttonText: 'Read Article',
-    variant: 'black',
+    variant: 'primary',
   },
 ];
 

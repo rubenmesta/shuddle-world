@@ -20,15 +20,15 @@ function App() {
   return (
     <Layout>
       <Hero
-        variant="small"
-        backgroundColor={colors.black[800]}
+        image={'/img/hero-image-md.jpg'}
+        variant="medium"
+        backgroundColor={colors.primary[900]}
         title={"Discover the Universe's Secrets"}
         subtitle={'Stay Informed with the Latest Space News'}
         secondaryCta={'Read Now'}
-        secondaryCtaVariant={'primary'}
+        secondaryCtaVariant={'secondary'}
         contentAlignment="center"
         search={false}
-        overlay
       />
       <GridContainer>
         <Grid container spacing={5}>
@@ -39,6 +39,7 @@ function App() {
               style={{ padding: 0 }}
               flexBasis="100%"
               padding="0 8rem"
+              fontSize={'3rem'}
             />
           </Grid>
           <Grid Box xs={4} mb={'3rem'}>
@@ -51,10 +52,34 @@ function App() {
                 'In a breakthrough discovery, a team of astronomers has identified a distant exoplanet located within the habitable zone of its star. This exoplanet, named Kepler-452b, bears striking similarities to Earth and could potentially support liquid water and, by extension, life. With its stable climate and sun-like star, Kepler-452b is a promising candidate for future exploration and the search for extraterrestrial life.'
               }
               buttonText={'Read More'}
-              variant={'black'}
+              variant={'primary'}
               width={'100%'}
             />
           </Grid>
+        </Grid>
+      </GridContainer>
+      <Box
+        sx={{
+          padding: 0,
+        }}
+      >
+        {sections.map((section) => {
+          return (
+            <Section
+              image={section.image}
+              title={section.title}
+              body={section.body}
+              buttonText={section.buttonText}
+              flip={section.flip}
+              variant={section.variant}
+              padding={'1rem 5rem'}
+              background={colors.primary[100]}
+            />
+          );
+        })}
+      </Box>
+      <GridContainer>
+        <Grid container spacing={5}>
           <Grid Box xs={8}>
             <Section
               title={news.title}
@@ -62,6 +87,7 @@ function App() {
               style={{ padding: 0 }}
               flexBasis="100%"
               padding="0 8rem"
+              fontSize={'3rem'}
             />
           </Grid>
           <Grid Box xs={4}>
@@ -92,7 +118,12 @@ function App() {
         </Grid>
       </GridContainer>
       <Container>
-        <Typography variant="h2" fontFamily={'Anton'} ml={'2.5rem'}>
+        <Typography
+          variant="h2"
+          fontFamily={'IBM Plex Serif'}
+          ml={'2.5rem'}
+          fontWeight={700}
+        >
           Latest Space News
         </Typography>
         <CardsContainer>
@@ -109,26 +140,7 @@ function App() {
           })}
         </CardsContainer>
       </Container>
-      <Box
-        sx={{
-          borderTop: `1px solid ${colors.grey[400]}`,
-          borderBottom: `1px solid ${colors.grey[400]}`,
-        }}
-      >
-        {sections.map((section) => {
-          return (
-            <Section
-              image={section.image}
-              title={section.title}
-              body={section.body}
-              buttonText={section.buttonText}
-              flip={section.flip}
-              variant={section.variant}
-              padding={'1rem 5rem'}
-            />
-          );
-        })}
-      </Box>
+
       <VerticalSection />
     </Layout>
   );

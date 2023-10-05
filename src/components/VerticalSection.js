@@ -18,7 +18,7 @@ const VerticalSection = () => {
           potential to harbor liquid water.
         </Body>
         <Box sx={{ width: '300px' }}>
-          <Button variant="primary" label="Explore" withArrow />
+          <Button variant="secondar" label="Explore" withArrow />
         </Box>
       </Content>
     </SectionWrapper>
@@ -32,7 +32,7 @@ const SectionWrapper = styled(Box)({
   margin: '5rem auto 0 auto',
   flexDirection: 'column',
   justifyContent: 'center',
-  backgroundImage: 'url("/img/unsplash3.jpg")',
+  backgroundImage: 'url("/img/people2.jpg")',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '80vh',
@@ -47,7 +47,7 @@ const Content = styled(Box)({
 const Title = styled(Typography)({
   fontSize: '3rem',
   color: colors.white[500],
-  fontFamily: 'Anton',
+  fontFamily: 'IBM Plex Serif',
   marginBottom: '3rem',
 });
 
